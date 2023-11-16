@@ -15,7 +15,7 @@ export function PoolStakedToken() {
 				) : (
 					<>
 						<span className="text-2xl font-semibold">
-							~{readAmounts(balance?.stakedLPBalance)} <span className="text-base font-normal">LP</span>
+							~{readAmounts(balance?.stakedLPBalance)} <span className="text-base font-normal">xNICO</span>
 						</span>
 						<span className="text-green absolute -bottom-5 right-0 w-max text-sm">
 							+ {readAmounts(balance?.lpBalance)} unstaked
