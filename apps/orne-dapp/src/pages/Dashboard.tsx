@@ -109,8 +109,8 @@ export function Dashboard() {
                 {/* Hitung Total Liquidity dengan mengalikan ornePoolInfo.data!.luna dengan 2 */}
                 {readAmounts(ornePoolInfo.data!.luna * 2,{ decimals: 6, comma: true, fixed: 3})}
 						</span>
-	<small className="text-sm">($)</small>
         )}
+			<small className="text-sm">($)</small>
     </div>
 
     <div className="flex items-center justify-between">
