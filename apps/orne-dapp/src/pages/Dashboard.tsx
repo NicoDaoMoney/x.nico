@@ -78,7 +78,7 @@ export function Dashboard() {
 									<span className="text-darkBlue50">Market Cap</span>
 									<div className="flex items-center gap-2">
 										<span className="text-2xl font-semibold">
-											{readAmounts(marketCap?.toFixed(2), { micro: false })} <span className="font-normal">$</span>
+											{Number((ornePoolInfo.data!.luna / (ornePoolInfo.data!.orne / 10**12)).toFixed(6) * 18_900_000).toLocaleString()}{' '} <span className="font-normal">$</span>
 										</span>
 									</div>
 								</div>
@@ -88,7 +88,7 @@ export function Dashboard() {
 									<span className="text-darkBlue50">Fully Diluted Valuation</span>
 									<div className="flex items-center gap-2">
 										<span className="text-2xl font-semibold">
-											{readAmounts(fullyDilutedValue?.toFixed(2), { micro: false })}{' '}
+											{Number((ornePoolInfo.data!.luna / (ornePoolInfo.data!.orne / 10**12)).toFixed(6) * 21_000_000).toLocaleString()}{' '}
 											<span className="font-normal">$</span>
 										</span>
 									</div>
