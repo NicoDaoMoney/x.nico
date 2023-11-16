@@ -16,7 +16,7 @@ export function Earn() {
 					<span className="earn-underline">NICO</span> VAULT
 				</h1>
 				<h2 className="text-2xl">
-					Vault Lp Earn <span className="text-green">$NICO</span>
+					Vault Nico Mint <span className="text-green">xNICO</span>
 				</h2>
 			</div>
 
@@ -30,7 +30,7 @@ export function Earn() {
 							variant={openForm === 'provide' ? 'fill' : 'outline'}
 							onClick={() => setOpenForm('provide')}
 						>
-							Provide
+							Mint xNICO
 						</Button>
 
 						<Button
@@ -38,7 +38,7 @@ export function Earn() {
 							variant={openForm === 'withdraw' ? 'fill' : 'outline'}
 							onClick={() => setOpenForm('withdraw')}
 						>
-							Withdraw
+							Burn xNICO
 						</Button>
 					</div>
 
