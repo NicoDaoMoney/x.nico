@@ -135,7 +135,7 @@ export function SwapForm() {
 
 					{isError && (
 						<span className="text-red mt-2">
-							{error?.response?.data.code === 2 ? 'Please, increase your slippage' : 'Unknown error'}
+							{error?.response?.data.code === 2 ? 'Please, increase your slippage' : ''}
 						</span>
 					)}
 				</div>
