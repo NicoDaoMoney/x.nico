@@ -75,7 +75,7 @@ export function WithdrawForm() {
     </div>
 
     <Button className="mb-14" onClick={handleSubmit}>
-      Withdraw
+      Burn xNICO
     </Button>
   </>
 );
