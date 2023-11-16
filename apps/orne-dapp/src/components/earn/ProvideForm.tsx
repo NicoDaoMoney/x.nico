@@ -101,7 +101,7 @@ export function ProvideForm() {
             <form onSubmit={handleSubmit}>
                 <div className="mb-5 flex items-center gap-2">
                     <h2 className="text-3xl font-semibold">
-                        Liquidity <span className="text-green">NICO</span> and axlUSDC
+                        Add Liquidity To Mint<span className="text-green">xNICO</span>
                     </h2>
                 </div>
                 <div className="mb-10 flex flex-col gap-8 lg:flex-row">
