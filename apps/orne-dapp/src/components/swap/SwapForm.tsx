@@ -97,7 +97,7 @@ export function SwapForm() {
 				<div className="p-5">
 					<dl className="space-y-2">
 						<div className="flex items-center justify-between">
-							<dt className="font-semibold">Price per ${to}</dt>
+							<dt className="font-semibold">Price per $Nico</dt>
 							<dd className="text-mediumGrey inline-flex items-center">
 								{isSimulating ? <ThreeDots color="hsl(203,23%,42%)" height="10" /> : pricePerToken} {from}
 							</dd>
