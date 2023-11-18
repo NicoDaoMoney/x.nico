@@ -101,7 +101,7 @@ export function ProvideForm() {
             <form onSubmit={handleSubmit}>
                 <div className="mb-5 flex items-center gap-2">
                     <h2 className="text-3xl font-semibold">
-                        Add Liquidity To Mint<span className="text-green">xNICO</span>
+                        Add Liquidity axlUSDC<span className="text-green">NICO</span>
                     </h2>
                 </div>
                 <div className="mb-10 flex flex-col gap-8 lg:flex-row">
@@ -174,7 +174,7 @@ export function ProvideForm() {
                     </div>
                 </div>
                 <Button className="mb-14" type="submit">
-                    Mint xNICO
+                    Stake uLP
                 </Button>
             </form>
         </>
