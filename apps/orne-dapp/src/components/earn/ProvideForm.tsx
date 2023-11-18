@@ -174,7 +174,7 @@ export function ProvideForm() {
                     </div>
                 </div>
                 <Button className="mb-14" type="submit">
-                    Mint xNICO
+                    Stake uLP
                 </Button>
             </form>
         </>
