@@ -28,7 +28,7 @@ export function Application() {
 				}}
 			>
 				<Triangle ariaLabel="Loading the dApp" color="hsl(203,23%,42%)" />
-				<h1>Orne.io</h1>
+				<h1>NICO</h1>
 			</div>
 		);
 	}
