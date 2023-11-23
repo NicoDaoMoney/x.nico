@@ -70,7 +70,7 @@ export function Wallet() {
 					) : (
 						<p className="text-2xl font-semibold">
 							{readAmount(orneBalance.data?.balance, { decimals: 18, comma: true, fixed: 3 })}{' '}
-							<span className="font-normal">Orne</span>
+							<span className="font-normal">NICO</span>
 						</p>
 					)}
 					{lunaBalance.isLoading ? (
@@ -79,8 +79,8 @@ export function Wallet() {
 						</div>
 					) : (
 						<p className="text-2xl font-semibold">
-							{readAmount(lunaBalance.data?.balance, { decimals: 6, comma: true, fixed: 3 })}{' '}
-							<span className="font-normal">Luna</span>
+							{readAmounts(lunaBalance.data?.balance, { decimals: 6, comma: true, fixed: 3 })}{' '}
+							<span className="font-normal">axlUSDC</span>
 						</p>
 					)}
 				</div>
