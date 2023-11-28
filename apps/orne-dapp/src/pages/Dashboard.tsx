@@ -65,8 +65,8 @@ export function Dashboard() {
         ) : (
             <div className="text-2xl font-semibold">
                 {/* Hitung harga SEUL dengan membagi Pooled AXLUSDC oleh Pooled SEUL */}
-                {Number((ornePoolInfo.data!.luna / (ornePoolInfo.data!.orne / 10**12)).toFixed(6)).toPrecision(3)}{' '}
-							<span className="font-normal">USD</span>{' '}
+                {Number((ornePoolInfo.data!.luna / (ornePoolInfo.data!.orne / 1e12)).toFixed(6)).toPrecision(8)
+}{' '}<span className="font-normal">USD</span>{' '}
 							<small className="text-sm">($)</small>
             </div>
         )}
