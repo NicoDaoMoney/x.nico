@@ -11,7 +11,7 @@ import { useProvideLiquidity } from '~/hooks/useProvideLiquidity';
 import { useSwapSimulation } from '~/hooks/useSwapSimulation';
 import { Token } from '~/utils/constants';
 import { readAmounts } from '~/utils/readAmounts';
-import { readAmountss } from '~/utils/readAmountss';
+import { readAmounts } from '~/utils/readAmounts';
 import { Button } from '../ui/Button';
 import { IconToken } from '../ui/IconToken';
 
@@ -50,7 +50,7 @@ export function ProvideForm() {
         );
 
         if (amountOrne) {
-            setAmountLuna(readAmountss(estimatedReturn));
+            setAmountLuna(readAmounts(estimatedReturn));
         }
         setFetchingLuna(false);
     }, 700);
@@ -113,7 +113,7 @@ export function ProvideForm() {
                                     {isLoadingLunaBalance ? (
                                         <ThreeDots color="hsl(203,23%,42%)" height="10" />
                                     ) : (
-                                        readAmountss(lunaBalance?.balance)
+                                        readAmounts(lunaBalance?.balance)
                                     )}
                                 </span>
                             </div>

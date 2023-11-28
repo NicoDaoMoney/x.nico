@@ -6,7 +6,7 @@ import { useOrnePoolInfo } from '~/hooks/useOrnePoolInfo';
 import { useOrneTokenData } from '~/hooks/useOrneTokenData';
 import { Token } from '~/utils/constants';
 import { readAmounts } from '~/utils/readAmounts';
-import { readAmountss } from '~/utils/readAmountss';
+import { readAmounts } from '~/utils/readAmounts';
 import { readPercent } from '~/utils/readPercent';
 
 export function Dashboard() {
@@ -107,7 +107,7 @@ export function Dashboard() {
         ) : (
             <span className="text-2xl font-semibold">
                 {/* Hitung Total Liquidity dengan mengalikan ornePoolInfo.data!.luna dengan 2 */}
-                {readAmountss(ornePoolInfo.data!.luna * 2,{ decimals: 6, comma: true, fixed: 3})}
+                {readAmounts(ornePoolInfo.data!.luna * 2,{ decimals: 6, comma: true, fixed: 3})}
 						</span>
         )}
 			<small className="text-sm">($)</small>
@@ -137,7 +137,7 @@ export function Dashboard() {
                     </div>
                 ) : (
                     <span className="text-mediumGrey text-sm">
-                        {readAmountss(ornePoolInfo.data!.luna, { decimals: 6, comma: true, fixed: 3 })}
+                        {readAmounts(ornePoolInfo.data!.luna, { decimals: 6, comma: true, fixed: 3 })}
                     </span>
                 )}
             </span>

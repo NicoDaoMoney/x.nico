@@ -10,7 +10,7 @@ import { useShare } from '~/hooks/useShare';
 import { useWithdrawLiquidity } from '~/hooks/useWithdrawLiquidity';
 import { Token } from '~/utils/constants';
 import { readAmounts } from '~/utils/readAmounts';
-import { readAmountss } from '~/utils/readAmountss';
+import { readAmounts } from '~/utils/readAmounts';
 import { Button } from '../ui/Button';
 import { IconToken } from '../ui/IconToken';
 
@@ -54,7 +54,7 @@ export function WithdrawForm() {
                 {isLoading ? (
                   <ThreeDots color="hsl(203,23%,42%)" height="10" />
                 ) : (
-                  readAmountss(lpBalance?.stakedLPBalance)
+                  readAmounts(lpBalance?.stakedLPBalance)
                 )}
               </span>
               {/* <button className="border-green bg-green25 hover:bg-green flex h-7 items-center justify-center rounded-lg border px-3 font-semibold transition-colors hover:text-white">

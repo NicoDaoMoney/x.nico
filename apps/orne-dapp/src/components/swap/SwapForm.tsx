@@ -14,7 +14,7 @@ import { SwapParams, useSwap } from '~/hooks/useSwap';
 import { useSwapSimulation } from '~/hooks/useSwapSimulation';
 import { Token } from '~/utils/constants';
 import { readAmounts } from '~/utils/readAmounts';
-import { readAmountss } from '~/utils/readAmountss';
+import { readAmounts } from '~/utils/readAmounts';
 
 export function SwapForm() {
 	const { data: orneBalance, isLoading: isLoadingOrneBalance } = useOrneBalance();
@@ -49,7 +49,7 @@ export function SwapForm() {
 	const pricePerToken =
 		amount && simulated !== '0' ? new Dec(amount).times(1_000_000_000_000_000_000).dividedBy(simulated).toFixed(6) : 0;
 
-	const feePrice = readAmountss(fee?.amount?.get('uluna')?.amount) || '0';
+	const feePrice = readAmounts(fee?.amount?.get('uluna')?.amount) || '0';
 
 	function sendSwapTransaction() {
 		const transactionParams = {
@@ -76,7 +76,7 @@ export function SwapForm() {
 							{isLoadingOrneBalance || isLoadingLunaBalance ? (
 								<ThreeDots color="hsl(203,23%,42%)" height="10" />
 							) : (
-								readAmountss(swapTokenBalance)
+								readAmounts(swapTokenBalance)
 							)}
 						</span>
 					</div>

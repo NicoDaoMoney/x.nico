@@ -5,7 +5,7 @@ import { IconToken } from '~/components/ui/IconToken';
 import { useOrneTokenData } from '~/hooks/useOrneTokenData';
 import { useOrnePoolInfo } from '~/hooks/useOrnePoolInfo';
 import { Token } from '~/utils/constants';
-import { readAmountss } from '~/utils/readAmountss';
+import { readAmounts } from '~/utils/readAmounts';
 import { readPercent } from '~/utils/readPercent';
 
 export function PoolInfo() {
@@ -32,7 +32,7 @@ export function PoolInfo() {
 				<span className="text-darkBlue50">Liquidity</span>
 				<span className="text-2xl font-semibold">
 					<span className="text-base">$</span>{' '}
-					{isLoading ? <ThreeDots color="hsl(203,23%,42%)" height="10" /> : readAmountss(ornePoolInfo.data!.luna * 2, { decimals: 6, comma: true, fixed: 3 })}
+					{isLoading ? <ThreeDots color="hsl(203,23%,42%)" height="10" /> : readAmounts(ornePoolInfo.data!.luna * 2, { decimals: 6, comma: true, fixed: 3 })}
 				</span>
 			</div>
 			{status !== WalletStatus.WALLET_CONNECTED && <span>Connect your wallet to see your info</span>}
