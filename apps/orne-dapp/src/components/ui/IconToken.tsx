@@ -1,6 +1,6 @@
 import astro from '~/assets/tokens/astro.png';
 import luna from '~/assets/tokens/luna.png';
-import orne from '~/assets/tokens/orne.png';
+import orne from '~/assets/tokens/seul.png';
 import { Token } from '~/utils/constants';
 
 type IconTokenProps = {
