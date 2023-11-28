@@ -7,8 +7,8 @@ type Contracts = 'token' | 'orneLunaPair' | 'lunaUsdcPair' | 'lp' | 'company' | 
 export type ContractAddress = Record<Contracts, string>;
 
 const kTestnetContract: ContractAddress = {
-	token: 'terra1e0efrrrj8d55pflme3dmtyuj7klzcef5cfmz6r2jyqz77kk2jz3qa6drg3',
-	orneLunaPair: 'terra1s2txvndlu5fezsq3f7zgtrw0pk3ryw0lxq9nfgzuqr3hhlnc92xsghwnzm',
+	token: 'terra13s5pxw5j2p4ssvzwvxd8l7h30vke8vjgtng75vqgv6p9vddfk3hskfka0l',
+	orneLunaPair: 'terra1etafgl0xun96jm3wnwvvtmmkh6hxunzwnq3v950ea5jflywwrj4srxx409',
 	lunaUsdcPair: 'terra16u6xa76krku3ykxck44x39s62za7qhsh8gr7sk9jwgt8nndwwjnq7c2zr4',
 	lp: 'terra1h2um6wajtjsea2kec0saajlxrqghfmzm98hpkxhnn97utvszzyuqds6qa8',
 	company: 'terra102d7hvknwqegydy03kfpapj3zn3m7hschy90qy',
@@ -17,8 +17,8 @@ const kTestnetContract: ContractAddress = {
 };
 
 const kMainnetContract: ContractAddress = {
-	token: 'terra1e0efrrrj8d55pflme3dmtyuj7klzcef5cfmz6r2jyqz77kk2jz3qa6drg3',
-	orneLunaPair: 'terra1s2txvndlu5fezsq3f7zgtrw0pk3ryw0lxq9nfgzuqr3hhlnc92xsghwnzm',
+	token: 'terra13s5pxw5j2p4ssvzwvxd8l7h30vke8vjgtng75vqgv6p9vddfk3hskfka0l',
+	orneLunaPair: 'terra1etafgl0xun96jm3wnwvvtmmkh6hxunzwnq3v950ea5jflywwrj4srxx409',
 	lunaUsdcPair: 'terra1fd68ah02gr2y8ze7tm9te7m70zlmc7vjyyhs6xlhsdmqqcjud4dql4wpxr',
 	lp: 'terra1h2um6wajtjsea2kec0saajlxrqghfmzm98hpkxhnn97utvszzyuqds6qa8',
 	company: 'terra1swvw2l2ttg685usu660qql09yefy3mec5l08eu',

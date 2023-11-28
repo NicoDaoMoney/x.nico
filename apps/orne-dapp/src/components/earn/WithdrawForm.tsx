@@ -9,8 +9,8 @@ import { useLPBalance } from '~/hooks/useLPBalance';
 import { useShare } from '~/hooks/useShare';
 import { useWithdrawLiquidity } from '~/hooks/useWithdrawLiquidity';
 import { Token } from '~/utils/constants';
-import { readAmount } from '~/utils/readAmount';
 import { readAmounts } from '~/utils/readAmounts';
+import { readAmountss } from '~/utils/readAmountss';
 import { Button } from '../ui/Button';
 import { IconToken } from '../ui/IconToken';
 
@@ -37,7 +37,7 @@ export function WithdrawForm() {
   <>
     <div className="mb-5 flex items-center gap-2">
       <h2 className="text-3xl font-semibold">
-        Withdraw <span className="text-green">axlUSDC-NICO</span>
+        Withdraw <span className="text-green">axlUSDC-SEUL</span>
       </h2>
       {/* <button className="border-green bg-green25 hover:bg-green flex h-7 items-center justify-center rounded-lg border px-3 font-semibold transition-colors hover:text-white">
         Max
@@ -54,7 +54,7 @@ export function WithdrawForm() {
                 {isLoading ? (
                   <ThreeDots color="hsl(203,23%,42%)" height="10" />
                 ) : (
-                  readAmounts(lpBalance?.stakedLPBalance)
+                  readAmountss(lpBalance?.stakedLPBalance)
                 )}
               </span>
               {/* <button className="border-green bg-green25 hover:bg-green flex h-7 items-center justify-center rounded-lg border px-3 font-semibold transition-colors hover:text-white">

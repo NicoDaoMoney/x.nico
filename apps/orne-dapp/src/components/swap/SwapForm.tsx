@@ -13,8 +13,8 @@ import { useOrneBalance } from '~/hooks/useOrneBalance';
 import { SwapParams, useSwap } from '~/hooks/useSwap';
 import { useSwapSimulation } from '~/hooks/useSwapSimulation';
 import { Token } from '~/utils/constants';
-import { readAmount } from '~/utils/readAmount';
 import { readAmounts } from '~/utils/readAmounts';
+import { readAmountss } from '~/utils/readAmountss';
 
 export function SwapForm() {
 	const { data: orneBalance, isLoading: isLoadingOrneBalance } = useOrneBalance();
@@ -49,7 +49,7 @@ export function SwapForm() {
 	const pricePerToken =
 		amount && simulated !== '0' ? new Dec(amount).times(1_000_000_000_000_000_000).dividedBy(simulated).toFixed(6) : 0;
 
-	const feePrice = readAmounts(fee?.amount?.get('uluna')?.amount) || '0';
+	const feePrice = readAmountss(fee?.amount?.get('uluna')?.amount) || '0';
 
 	function sendSwapTransaction() {
 		const transactionParams = {
@@ -76,7 +76,7 @@ export function SwapForm() {
 							{isLoadingOrneBalance || isLoadingLunaBalance ? (
 								<ThreeDots color="hsl(203,23%,42%)" height="10" />
 							) : (
-								readAmounts(swapTokenBalance)
+								readAmountss(swapTokenBalance)
 							)}
 						</span>
 					</div>
@@ -97,7 +97,7 @@ export function SwapForm() {
 				<div className="p-5">
 					<dl className="space-y-2">
 						<div className="flex items-center justify-between">
-							<dt className="font-semibold">1 $Nico</dt>
+							<dt className="font-semibold">1 $Seul</dt>
 							<dd className="text-mediumGrey inline-flex items-center">
 								{isSimulating ? <ThreeDots color="hsl(203,23%,42%)" height="10" /> : pricePerToken} axlUSDC
 							</dd>
@@ -119,11 +119,11 @@ export function SwapForm() {
 					<span className="text-darkBlue50 mb-3">Estimated</span>
 					<div className="flex justify-between">
 						<span className="inline-flex items-center text-2xl font-semibold">
-							{isSimulating ? <ThreeDots color="hsl(203,23%,42%)" height="10" /> : readAmount(simulated)}
+							{isSimulating ? <ThreeDots color="hsl(203,23%,42%)" height="10" /> : readAmounts(simulated)}
 						</span>
 						<div className="flex items-center gap-2">
 							<IconToken name={to} size={36} />
-							<span className="text-mediumGrey">NICO</span>
+							<span className="text-mediumGrey">SEUL</span>
 						</div>
 					</div>
 				</div>

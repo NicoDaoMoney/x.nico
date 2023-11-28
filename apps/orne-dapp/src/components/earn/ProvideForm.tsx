@@ -10,8 +10,8 @@ import { useOrneBalance } from '~/hooks/useOrneBalance';
 import { useProvideLiquidity } from '~/hooks/useProvideLiquidity';
 import { useSwapSimulation } from '~/hooks/useSwapSimulation';
 import { Token } from '~/utils/constants';
-import { readAmount } from '~/utils/readAmount';
 import { readAmounts } from '~/utils/readAmounts';
+import { readAmountss } from '~/utils/readAmountss';
 import { Button } from '../ui/Button';
 import { IconToken } from '../ui/IconToken';
 
@@ -34,7 +34,7 @@ export function ProvideForm() {
         );
 
         if (amountLuna) {
-            setAmountOrne(readAmount(estimatedReturn));
+            setAmountOrne(readAmounts(estimatedReturn));
         }
 
         setFetchingOrne(false);
@@ -50,7 +50,7 @@ export function ProvideForm() {
         );
 
         if (amountOrne) {
-            setAmountLuna(readAmounts(estimatedReturn));
+            setAmountLuna(readAmountss(estimatedReturn));
         }
         setFetchingLuna(false);
     }, 700);
@@ -101,7 +101,7 @@ export function ProvideForm() {
             <form onSubmit={handleSubmit}>
                 <div className="mb-5 flex items-center gap-2">
                     <h2 className="text-3xl font-semibold">
-                        Add Liquidity <span className="text-green">axlUSDC-NICO</span>
+                        Add Liquidity <span className="text-green">axlUSDC-SEUL</span>
                     </h2>
                 </div>
                 <div className="mb-10 flex flex-col gap-8 lg:flex-row">
@@ -113,7 +113,7 @@ export function ProvideForm() {
                                     {isLoadingLunaBalance ? (
                                         <ThreeDots color="hsl(203,23%,42%)" height="10" />
                                     ) : (
-                                        readAmounts(lunaBalance?.balance)
+                                        readAmountss(lunaBalance?.balance)
                                     )}
                                 </span>
                             </div>
@@ -148,7 +148,7 @@ export function ProvideForm() {
                                     {isLoadingOrneBalance ? (
                                         <ThreeDots color="hsl(203,23%,42%)" height="10" />
                                     ) : (
-                                        readAmount(orneBalance?.balance)
+                                        readAmounts(orneBalance?.balance)
                                     )}
                                 </span>
                             </div>
@@ -167,7 +167,7 @@ export function ProvideForm() {
                                 )}
                                 <div className="flex items-center gap-2">
                                     <IconToken name={Token.Orne} size={36} />
-                                    <span className="text-mediumGrey">NICO</span>
+                                    <span className="text-mediumGrey">SEUL</span>
                                 </div>
                             </div>
                         </div>

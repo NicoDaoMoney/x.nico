@@ -5,8 +5,8 @@ import Tooltip from '~/components/ui/Tooltip';
 import { useOrnePoolInfo } from '~/hooks/useOrnePoolInfo';
 import { useOrneTokenData } from '~/hooks/useOrneTokenData';
 import { Token } from '~/utils/constants';
-import { readAmount } from '~/utils/readAmount';
 import { readAmounts } from '~/utils/readAmounts';
+import { readAmountss } from '~/utils/readAmountss';
 import { readPercent } from '~/utils/readPercent';
 
 export function Dashboard() {
@@ -16,12 +16,12 @@ export function Dashboard() {
 
 	return (
 		<div className="mt-5 lg:-mt-6">
-			<div className="timport { readAmount } from '~/utils/readAmount';ext-center lg:mb-20 lg:text-left">
+			<div className="timport { readAmounts } from '~/utils/readAmounts';ext-center lg:mb-20 lg:text-left">
 				<h1 className="mb-5 text-5xl font-bold">
-					NICO<span className="dashboard-underline">dashboard</span>
+					SEUL<span className="dashboard-underline">dashboard</span>
 				</h1>
 				<h2 className="text-2xl">
-					All information about <span className="text-green">$NICO</span>
+					All information about <span className="text-green">$SEUL</span>
 				</h2>
 			</div>
 
@@ -36,7 +36,7 @@ export function Dashboard() {
 							<div className="flex items-center gap-2">
 								<IconToken name={Token.Orne} size={60} />
 								<div className="flex flex-col">
-									<span className="font-semibold">NICO</span>
+									<span className="font-semibold">SEUL</span>
 								</div>
 							</div>
 						</div>
@@ -46,7 +46,7 @@ export function Dashboard() {
 								{/* Harga */}
 <div className="bg-offWhite flex h-32 flex-1 flex-col justify-center gap-2 rounded-lg p-7 shadow-sm">
     <div className="flex items-center gap-2">
-        <span className="text-darkBlue50">Price NICO</span>
+        <span className="text-darkBlue50">Price SEUL</span>
         <Tooltip
             trigger={
                 <div>
@@ -64,7 +64,7 @@ export function Dashboard() {
             </div>
         ) : (
             <div className="text-2xl font-semibold">
-                {/* Hitung harga NICO dengan membagi Pooled AXLUSDC oleh Pooled NICO */}
+                {/* Hitung harga SEUL dengan membagi Pooled AXLUSDC oleh Pooled SEUL */}
                 {Number((ornePoolInfo.data!.luna / (ornePoolInfo.data!.orne / 10**12)).toFixed(6)).toPrecision(3)}{' '}
 							<span className="font-normal">USD</span>{' '}
 							<small className="text-sm">($)</small>
@@ -107,7 +107,7 @@ export function Dashboard() {
         ) : (
             <span className="text-2xl font-semibold">
                 {/* Hitung Total Liquidity dengan mengalikan ornePoolInfo.data!.luna dengan 2 */}
-                {readAmounts(ornePoolInfo.data!.luna * 2,{ decimals: 6, comma: true, fixed: 3})}
+                {readAmountss(ornePoolInfo.data!.luna * 2,{ decimals: 6, comma: true, fixed: 3})}
 						</span>
         )}
 			<small className="text-sm">($)</small>
@@ -115,7 +115,7 @@ export function Dashboard() {
 
     <div className="flex items-center justify-between">
         <div className="flex flex-col">
-            <span className="text-sm font-semibold">Pooled NICO</span>
+            <span className="text-sm font-semibold">Pooled SEUL</span>
             <div className="text-mediumGrey text-sm">
                 {ornePoolInfo.isLoading ? (
                     <div>
@@ -123,7 +123,7 @@ export function Dashboard() {
                     </div>
                 ) : (
                     <span className="text-mediumGrey text-sm">
-                        {readAmount(ornePoolInfo.data!.orne, { decimals: 18, comma: true, fixed: 3 })}
+                        {readAmounts(ornePoolInfo.data!.orne, { decimals: 18, comma: true, fixed: 3 })}
                     </span>
                 )}
             </div>
@@ -137,7 +137,7 @@ export function Dashboard() {
                     </div>
                 ) : (
                     <span className="text-mediumGrey text-sm">
-                        {readAmounts(ornePoolInfo.data!.luna, { decimals: 6, comma: true, fixed: 3 })}
+                        {readAmountss(ornePoolInfo.data!.luna, { decimals: 6, comma: true, fixed: 3 })}
                     </span>
                 )}
             </span>

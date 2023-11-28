@@ -1,7 +1,7 @@
 import { ThreeDots } from 'react-loader-spinner';
 import { useLPBalance } from '~/hooks/useLPBalance';
-import { readAmount } from '~/utils/readAmount';
 import { readAmounts } from '~/utils/readAmounts';
+import { readAmountss } from '~/utils/readAmountss';
 
 export function PoolStakedToken() {
 	const { data: balance, isLoading: isLoadingBalance } = useLPBalance();
@@ -15,10 +15,10 @@ export function PoolStakedToken() {
 				) : (
 					<>
 						<span className="text-2xl font-semibold">
-							~{readAmounts(balance?.stakedLPBalance)} <span className="text-base font-normal">uLP</span>
+							~{readAmountss(balance?.stakedLPBalance)} <span className="text-base font-normal">uLP</span>
 						</span>
 						<span className="text-green absolute -bottom-5 right-0 w-max text-sm">
-							+ {readAmounts(balance?.lpBalance)} unstaked
+							+ {readAmountss(balance?.lpBalance)} unstaked
 						</span>
 					</>
 				)}
