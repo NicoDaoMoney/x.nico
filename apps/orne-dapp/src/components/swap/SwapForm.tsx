@@ -47,7 +47,7 @@ export function SwapForm() {
 	}, [debouncedAmount, from, to, debouncedSlippage]);
 
 	const pricePerToken =
-		amount && simulated !== '0' ? new Dec(amount).times(1_000_000_000_000_000_000).dividedBy(simulated).toFixed(6) : 0;
+		amount && simulated !== '0' ? new Dec(amount).times(1_000_000).dividedBy(simulated).toFixed(6) : 0;
 
 	const feePrice = readAmounts(fee?.amount?.get('uluna')?.amount) || '0';
 
