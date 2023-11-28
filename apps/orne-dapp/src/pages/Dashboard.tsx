@@ -65,8 +65,7 @@ export function Dashboard() {
         ) : (
             <div className="text-2xl font-semibold">
                 {/* Hitung harga SEUL dengan membagi Pooled AXLUSDC oleh Pooled SEUL */}
-                {Number((ornePoolInfo.data!.luna / (ornePoolInfo.data!.orne)).toFixed(6))
-}{' '}<span className="font-normal">USD</span>{' '}
+                {Number((ornePoolInfo.data!.luna / ornePoolInfo.data!.orne).toFixed(6))}{' '}<span className="font-normal">USD</span>{' '}
 							<small className="text-sm">($)</small>
             </div>
         )}
@@ -78,7 +77,7 @@ export function Dashboard() {
 									<span className="text-darkBlue50">Market Cap</span>
 									<div className="flex items-center gap-2">
 										<span className="text-2xl font-semibold">
-											{Number((ornePoolInfo.data!.luna / (ornePoolInfo.data!.orne / 10**12)).toFixed(6) * 18_900_000).toLocaleString()}{' '} <span className="font-normal">$</span>
+											{Number((ornePoolInfo.data!.luna / (ornePoolInfo.data!.orne )).toFixed(6) * 18_900_000).toLocaleString()}{' '} <span className="font-normal">$</span>
 										</span>
 									</div>
 								</div>
@@ -88,7 +87,7 @@ export function Dashboard() {
 									<span className="text-darkBlue50">Fully Diluted Valuation</span>
 									<div className="flex items-center gap-2">
 										<span className="text-2xl font-semibold">
-											{Number((ornePoolInfo.data!.luna / (ornePoolInfo.data!.orne / 10**12)).toFixed(6) * 21_000_000).toLocaleString()}{' '}
+											{Number((ornePoolInfo.data!.luna / (ornePoolInfo.data!.orne )).toFixed(6) * 21_000_000).toLocaleString()}{' '}
 											<span className="font-normal">$</span>
 										</span>
 									</div>
