@@ -13,7 +13,7 @@ import { useOrneBalance } from '~/hooks/useOrneBalance';
 import { SwapParams, useSwap } from '~/hooks/useSwap';
 import { useSwapSimulation } from '~/hooks/useSwapSimulation';
 import { Token } from '~/utils/constants';
-import { readAmounts } from '~/utils/readAmounts';
+import { readAmount } from '~/utils/readAmount';
 import { readAmounts } from '~/utils/readAmounts';
 
 export function SwapForm() {
@@ -49,7 +49,7 @@ export function SwapForm() {
 	const pricePerToken =
 		amount && simulated !== '0' ? new Dec(amount).times(1_000_000).dividedBy(simulated).toFixed(6) : 0;
 
-	const feePrice = readAmounts(fee?.amount?.get('uluna')?.amount) || '0';
+	const feePrice = readAmount(fee?.amount?.get('uluna')?.amount) || '0';
 
 	function sendSwapTransaction() {
 		const transactionParams = {
@@ -89,7 +89,7 @@ export function SwapForm() {
 						/>
 						<div className="flex items-center gap-2">
 							<IconToken name={from} size={36} />
-							<span className="text-mediumGrey">axlUSDC</span>
+							<span className="text-mediumGrey">{from}</span>
 						</div>
 					</div>
 				</div>
@@ -97,9 +97,9 @@ export function SwapForm() {
 				<div className="p-5">
 					<dl className="space-y-2">
 						<div className="flex items-center justify-between">
-							<dt className="font-semibold">1 $Seul</dt>
+							<dt className="font-semibold">Price per ${to}</dt>
 							<dd className="text-mediumGrey inline-flex items-center">
-								{isSimulating ? <ThreeDots color="hsl(203,23%,42%)" height="10" /> : pricePerToken} axlUSDC
+								{isSimulating ? <ThreeDots color="hsl(203,23%,42%)" height="10" /> : pricePerToken} {from}
 							</dd>
 						</div>
 						<div className="flex items-center justify-between">
@@ -113,6 +113,12 @@ export function SwapForm() {
 			</div>
 
 			{/* Change Direction */}
+			<div className="-mt-10 flex items-center justify-center lg:mt-0 lg:h-32">
+				<button className="block h-[60px] w-[60px] rounded-full shadow-lg" onClick={changeDirection}>
+					<img src={swapCurrency} alt="Swap currency" />
+				</button>
+			</div>
+
 			{/* To Input */}
 			<div className="flex-1">
 				<div className="bg-offWhite flex h-32 flex-1 flex-col justify-center rounded-lg p-8 shadow-sm">
@@ -123,7 +129,7 @@ export function SwapForm() {
 						</span>
 						<div className="flex items-center gap-2">
 							<IconToken name={to} size={36} />
-							<span className="text-mediumGrey">SEUL</span>
+							<span className="text-mediumGrey">{to}</span>
 						</div>
 					</div>
 				</div>
