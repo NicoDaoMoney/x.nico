@@ -53,7 +53,7 @@ interface ProvideLiquidityParams {
 }
 
 function computeProvideLiquidityMessage(params: ProvideLiquidityParams) {
-	const amountOrne = params.amountOrne.times(1e18).toFixed(0);
+	const amountOrne = params.amountOrne.times(1_000_000).toString();
 	const amountLuna = params.amountLuna.times(1_000_000).toString();
 
 	const increaseAllowanceMessage = {
