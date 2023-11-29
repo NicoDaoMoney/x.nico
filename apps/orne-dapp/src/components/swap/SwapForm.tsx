@@ -13,7 +13,7 @@ import { useOrneBalance } from '~/hooks/useOrneBalance';
 import { SwapParams, useSwap } from '~/hooks/useSwap';
 import { useSwapSimulation } from '~/hooks/useSwapSimulation';
 import { Token } from '~/utils/constants';
-import { readAmount } from '~/utils/readAmount';
+import { readAmounts } from '~/utils/readAmounts';
 import { readAmounts } from '~/utils/readAmounts';
 
 export function SwapForm() {
@@ -47,7 +47,7 @@ export function SwapForm() {
 	}, [debouncedAmount, from, to, debouncedSlippage]);
 
 	const pricePerToken =
-		amount && simulated !== '0' ? new Dec(amount).times(1_000_000_000_000_000_000).dividedBy(simulated).toFixed(6) : 0;
+		amount && simulated !== '0' ? new Dec(amount).times(1_000_000).dividedBy(simulated).toFixed(6) : 0;
 
 	const feePrice = readAmounts(fee?.amount?.get('uluna')?.amount) || '0';
 
@@ -97,9 +97,9 @@ export function SwapForm() {
 				<div className="p-5">
 					<dl className="space-y-2">
 						<div className="flex items-center justify-between">
-							<dt className="font-semibold">Price per ${to}</dt>
+							<dt className="font-semibold">1 $Seul</dt>
 							<dd className="text-mediumGrey inline-flex items-center">
-								{isSimulating ? <ThreeDots color="hsl(203,23%,42%)" height="10" /> : pricePerToken} {from}
+								{isSimulating ? <ThreeDots color="hsl(203,23%,42%)" height="10" /> : pricePerToken} axlUSDC
 							</dd>
 						</div>
 						<div className="flex items-center justify-between">
@@ -113,17 +113,22 @@ export function SwapForm() {
 			</div>
 
 			{/* Change Direction */}
+			<div className="-mt-10 flex items-center justify-center lg:mt-0 lg:h-32">
+				<button className="block h-[60px] w-[60px] rounded-full shadow-lg" onClick={changeDirection}>
+					<img src={swapCurrency} alt="Swap currency" />
+				</button>
+			</div>
 			{/* To Input */}
 			<div className="flex-1">
 				<div className="bg-offWhite flex h-32 flex-1 flex-col justify-center rounded-lg p-8 shadow-sm">
 					<span className="text-darkBlue50 mb-3">Estimated</span>
 					<div className="flex justify-between">
 						<span className="inline-flex items-center text-2xl font-semibold">
-							{isSimulating ? <ThreeDots color="hsl(203,23%,42%)" height="10" /> : readAmount(simulated)}
+							{isSimulating ? <ThreeDots color="hsl(203,23%,42%)" height="10" /> : readAmounts(simulated)}
 						</span>
 						<div className="flex items-center gap-2">
 							<IconToken name={to} size={36} />
-							<span className="text-mediumGrey">NICO</span>
+							<span className="text-mediumGrey">SEUL</span>
 						</div>
 					</div>
 				</div>
