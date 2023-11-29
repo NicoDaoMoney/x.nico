@@ -67,18 +67,18 @@ function computeProvideLiquidityMessage(params: ProvideLiquidityParams) {
 		provide_liquidity: {
 			assets: [
 				{
-					amount: amountOrne,
-					info: {
-						token: {
-							contract_addr: params.contract.token,
-						},
-					},
-				},
-				{
 					amount: amountLuna,
 					info: {
 						native_token: {
 							denom: 'ibc/B3504E092456BA618CC28AC671A71FB08C6CA0FD0BE7C8A5B5A3E2DD933CC9E4',
+						},
+					},
+				},
+				{
+					amount: amountOrne,
+					info: {
+						token: {
+							contract_addr: params.contract.token,
 						},
 					},
 				},

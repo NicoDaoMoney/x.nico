@@ -49,7 +49,7 @@ export function SwapForm() {
 	const pricePerToken =
 		amount && simulated !== '0' ? new Dec(amount).times(1_000_000).dividedBy(simulated).toFixed(6) : 0;
 
-	const feePrice = readAmounts(fee?.amount?.get('uluna')?.amount) || '0';
+	const feePrice = readAmount(fee?.amount?.get('uluna')?.amount) || '0';
 
 	function sendSwapTransaction() {
 		const transactionParams = {
@@ -89,7 +89,7 @@ export function SwapForm() {
 						/>
 						<div className="flex items-center gap-2">
 							<IconToken name={from} size={36} />
-							<span className="text-mediumGrey">axlUSDC</span>
+							<span className="text-mediumGrey">{from}</span>
 						</div>
 					</div>
 				</div>

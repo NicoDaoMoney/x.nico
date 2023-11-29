@@ -1,1 +1,1 @@
-# nico.earn
+# seul.earn

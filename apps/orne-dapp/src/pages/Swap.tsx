@@ -8,11 +8,11 @@ export function Swap() {
 		<div className="mt-5 lg:-mt-6">
 			<div className="mb-10 text-center lg:mb-20 lg:text-left">
 				<h1 className="mb-5 text-5xl font-bold">
-					<span className="swap-underline">Buy</span> NICO
+					<span className="swap-underline">Buy</span> SEUL
 				</h1>
 
 				<h2 className="text-2xl">
-					Instantly buy <span className="text-green">$NICO</span> with axlUSDC
+					Instantly buy <span className="text-green">$SEUL</span> with axlUSDC
 				</h2>
 			</div>
 

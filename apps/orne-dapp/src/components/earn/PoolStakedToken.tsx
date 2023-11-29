@@ -1,6 +1,6 @@
 import { ThreeDots } from 'react-loader-spinner';
 import { useLPBalance } from '~/hooks/useLPBalance';
-import { readAmount } from '~/utils/readAmount';
+import { readAmounts } from '~/utils/readAmounts';
 import { readAmounts } from '~/utils/readAmounts';
 
 export function PoolStakedToken() {

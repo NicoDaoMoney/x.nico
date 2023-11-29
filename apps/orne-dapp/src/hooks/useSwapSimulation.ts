@@ -25,7 +25,7 @@ export function useSwapSimulation() {
 				},
 			};
 		} else {
-			const amount = new Dec(params.amount).times(1_000_000_000_000_000_000).toString();
+			const amount = new Dec(params.amount).times(1_000_000).toString();
 			query = {
 				simulation: {
 					offer_asset: {

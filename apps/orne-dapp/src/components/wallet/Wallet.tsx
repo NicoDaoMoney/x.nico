@@ -10,7 +10,7 @@ import { Popover } from '~/components/ui/Popover';
 import { useConnectedWallet } from '~/hooks/useConnectedWallet';
 import { useLunaBalance } from '~/hooks/useLunaBalance';
 import { useOrneBalance } from '~/hooks/useOrneBalance';
-import { readAmount } from '~/utils/readAmount';
+import { readAmounts } from '~/utils/readAmounts';
 
 export function Wallet() {
 	const orneBalance = useOrneBalance();
@@ -36,7 +36,7 @@ export function Wallet() {
 			{/*			<ThreeDots width={35} height={30} color="hsl(230, 21%, 65%)" />*/}
 			{/*		</div>*/}
 			{/*	) : (*/}
-			{/*		<span>{readAmount(orneBalance.data?.balance, { decimals: 18, comma: true, fixed: 3 })}</span>*/}
+			{/*		<span>{readAmounts(orneBalance.data?.balance, { decimals: 18, comma: true, fixed: 3 })}</span>*/}
 			{/*	)}*/}
 			{/*	<span className="hidden rounded-full border border-mediumGrey px-2 py-0.5 leading-none sm:inline">ORNE</span>*/}
 			{/*</div>*/}
@@ -69,8 +69,8 @@ export function Wallet() {
 						</div>
 					) : (
 						<p className="text-2xl font-semibold">
-							{readAmount(orneBalance.data?.balance, { decimals: 18, comma: true, fixed: 3 })}{' '}
-							<span className="font-normal">NICO</span>
+							{readAmounts(orneBalance.data?.balance, { decimals: 18, comma: true, fixed: 3 })}{' '}
+							<span className="font-normal">SEUL</span>
 						</p>
 					)}
 					{lunaBalance.isLoading ? (
