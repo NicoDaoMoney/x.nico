@@ -18,9 +18,9 @@ const kTestnetContract: ContractAddress = {
 
 const kMainnetContract: ContractAddress = {
 	token: 'terra13s5pxw5j2p4ssvzwvxd8l7h30vke8vjgtng75vqgv6p9vddfk3hskfka0l',
-	orneLunaPair: 'terra1etafgl0xun96jm3wnwvvtmmkh6hxunzwnq3v950ea5jflywwrj4srxx409',
+	orneLunaPair: 'terra13v3gl6jxxmfneaerte5nx3jwsq585utznum97mvh4l2qnrdgp7usrvr4r8',
 	lunaUsdcPair: 'terra1fd68ah02gr2y8ze7tm9te7m70zlmc7vjyyhs6xlhsdmqqcjud4dql4wpxr',
-	lp: 'terra1m2crrx4d76sg9zqx0nrp5c3uq3s0ryhzyat79z7eya4qrntdc50s9d32xw',
+	lp: 'terra1eactyp6a6k4k5dm5rx8mzdn49dgepsv336th44zzsgj2eel33cwsaq4zrz',
 	company: 'terra1swvw2l2ttg685usu660qql09yefy3mec5l08eu',
 	astroGenerator: 'terra1ksvlfex49desf4c452j6dewdjs6c48nafemetuwjyj6yexd7x3wqvwa7j9',
 	presale: 'terra17wzrjl43t7wen3fd67t5qg9nzxeqkdffa7wrgr3k4rnv6fz5cv4qyff6c2',
