@@ -62,7 +62,7 @@ function computeSwapLunaToOrneMessage(
 	});
 
 	return new MsgExecuteContract(address, contract, query, [
-		new Coin('ibc/B3504E092456BA618CC28AC671A71FB08C6CA0FD0BE7C8A5B5A3E2DD933CC9E4', new Dec(params.amountLuna).times(1_000_000)),
+		new Coin('ibc/CBF67A2BCF6CAE343FDF251E510C8E18C361FC02B23430C121116E0811835DEF', new Dec(params.amountLuna).times(1_000_000)),
 	]);
 }
 
@@ -91,7 +91,7 @@ export function computeSwapLunaToOrneQuery(params: SwapMessageParams) {
 				amount: new Dec(params.amount).times(1_000_000).toString(),
 				info: {
 					native_token: {
-						denom: 'ibc/B3504E092456BA618CC28AC671A71FB08C6CA0FD0BE7C8A5B5A3E2DD933CC9E4',
+						denom: 'ibc/CBF67A2BCF6CAE343FDF251E510C8E18C361FC02B23430C121116E0811835DEF',
 					},
 				},
 			},

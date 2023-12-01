@@ -20,7 +20,7 @@ export function useSwapSimulation() {
 				simulation: {
 					offer_asset: {
 						amount,
-						info: { native_token: { denom: 'ibc/B3504E092456BA618CC28AC671A71FB08C6CA0FD0BE7C8A5B5A3E2DD933CC9E4' } },
+						info: { native_token: { denom: 'ibc/CBF67A2BCF6CAE343FDF251E510C8E18C361FC02B23430C121116E0811835DEF' } },
 					},
 				},
 			};

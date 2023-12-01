@@ -64,7 +64,7 @@ export function Dashboard() {
             </div>
         ) : (
             <div className="text-2xl font-semibold">
-                {/* Hitung harga SEUL dengan membagi Pooled AXLUSDC oleh Pooled SEUL */}
+                {/* Hitung harga SEUL dengan membagi Pooled axlUSDT oleh Pooled SEUL */}
                 {Number((ornePoolInfo.data!.luna / ornePoolInfo.data!.orne).toFixed(6))}{' '}<span className="font-normal">USD</span>{' '}
 							<small className="text-sm">($)</small>
             </div>
@@ -128,7 +128,7 @@ export function Dashboard() {
             </div>
         </div>
         <div className="flex flex-col">
-            <span className="text-sm font-semibold">Pooled axlUSDC</span>
+            <span className="text-sm font-semibold">Pooled axlUSDT</span>
             <span className="text-mediumGrey text-sm">
                 {ornePoolInfo.isLoading ? (
                     <div>

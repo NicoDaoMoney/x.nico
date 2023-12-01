@@ -2,7 +2,7 @@ export enum Token {
 	Luna = 'LUNA',
 	Orne = 'ORNE',
 	Astro = 'ASTRO',
-	Axlusdc = 'axlUSDC',
+	axlUSDT = 'axlUSDT',
 }
 
 export const kNumberRegex = /[\d.]+/g;

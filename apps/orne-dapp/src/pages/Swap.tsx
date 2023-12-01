@@ -12,7 +12,7 @@ export function Swap() {
 				</h1>
 
 				<h2 className="text-2xl">
-					Instantly buy <span className="text-green">$SEUL</span> with axlUSDC
+					Instantly buy <span className="text-green">$SEUL</span> with axlUSDT
 				</h2>
 			</div>
 

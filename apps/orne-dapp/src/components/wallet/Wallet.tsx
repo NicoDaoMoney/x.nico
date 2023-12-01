@@ -80,7 +80,7 @@ export function Wallet() {
 					) : (
 						<p className="text-2xl font-semibold">
 							{readAmounts(lunaBalance.data?.balance, { decimals: 6, comma: true, fixed: 3 })}{' '}
-							<span className="font-normal">axlUSDC</span>
+							<span className="font-normal">axlUSDT</span>
 						</p>
 					)}
 				</div>
